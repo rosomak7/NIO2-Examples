@@ -1,12 +1,18 @@
 package com.netcompany.nio2;
 
+import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,6 +20,7 @@ import java.util.stream.Stream;
  * Created by matm on 03-11-2016.
  */
 public class NewStreamMethodsTests {
+
     @Test
     public void testWalk() throws Exception {
         Path path = Paths.get(".");
@@ -60,4 +67,5 @@ public class NewStreamMethodsTests {
 //                            collect(Collectors.toList()));
 
     }
+
 }
